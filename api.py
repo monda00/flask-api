@@ -13,7 +13,7 @@ def get_articles():
     }
 
 
-@app.route("/articles_form", methods=["GET"])
+@app.route("/articles_form", methods=["POST"])
 def get_articles_with_form():
     title = request.form["title"]
     url = request.form["url"]
@@ -23,7 +23,7 @@ def get_articles_with_form():
     }
 
 
-@app.route("/articles_json", methods=["GET"])
+@app.route("/articles_json", methods=["POST"])
 def get_articles_with_json():
     data = request.get_json()
     title = data["title"]
